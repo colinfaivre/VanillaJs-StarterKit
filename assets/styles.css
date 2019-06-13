@@ -1,0 +1,127 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+:root {
+    --dark-blue: rgb(0, 0, 143);
+    --medium-blue: rgb(63, 63, 224);
+    --light-blue: rgb(81, 136, 255);
+    --background-grey: rgb(243, 243, 243);
+    --pink: rgb(255, 132, 153);
+}
+body {
+    margin: 0px;
+    background-color: var(--background-grey);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--dark-blue);
+}
+
+nav {
+    background-color: var(--medium-blue);
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    z-index: 10;
+    position: static;
+    color: white;
+}
+.nav-right {
+    display: flex;
+}
+.car-button {
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0px 10px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.current-route {
+    background-color: white;
+    color: var(--dark-blue);
+}
+
+.bottom-left-button, .bottom-right-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--pink);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+    z-index: 10;
+}
+.bottom-left-button {
+    left: 20px;
+}
+
+section {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    margin: 5px 5px 5px 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.car-photo {
+    width: 100%;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+}
+.bat-mobile {
+    background-image: url(batMobile.jpg);
+}
+.bond-mobile {
+    background-image: url(bondMobile.jpg);
+}
+.kitt {
+    background-image: url(kitt.jpg);
+}
+
+.photo-header {
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.car-info, .car-info i {
+    font-size: 13px;
+}
+.photo-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.test {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+}
