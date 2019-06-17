@@ -1,29 +1,22 @@
-export default function myPage(myPageData) {
-    'use strict'
+export const myPage = {
+    myPageElement: document.getElementById('my-page'),
 
-    const myPageElement = document.getElementById('my-page')
+    kill: () => {
+        myPage.myPageElement.innerHTML = ''
+    },
 
-    function kill() {
-        myPageElement.innerHTML = ''
-    }
-
-    function render(myPageData) {
-        myPageElement.innerHTML = 
+    render: (myPageData) => {
+        myPage.myPageElement.innerHTML = 
         `
             <h1 id="my-page-inner-element">My page</h1>
         `
         // Inner elements
         const myPageInnerElement = document.getElementById('my-page-inner-element')
         // Event listeners
-        myPageInnerElement.addEventListener('click', myPageInnerFunction)
-    }
+        myPageInnerElement.addEventListener('click', myPage.myPageInnerFunction)
+    },
 
-    function myPageInnerFunction() {
+    myPageInnerFunction: () => {
         console.log('function called successfully !')
-    }
-
-    return {
-        kill: kill,
-        render: render,
     }
 }

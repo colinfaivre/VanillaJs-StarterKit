@@ -1,14 +1,10 @@
-export default function myComponent() {
-    'use strict'
-
-    const myComponentElement = document.getElementById('my-component')
-
-    function kill() {
-        myComponentElement.innerHTML = ''
-    }
-
-    function render() {
-        myComponentElement.innerHTML =
+export const myComponent = {
+    myComponentElement: document.getElementById('my-component'),
+    kill: () => {
+        myComponent.myComponentElement.innerHTML = ''
+    },
+    render: () => {
+        myComponent.myComponentElement.innerHTML =
         `
             <div class="nav-left">
                 App title
@@ -16,10 +12,5 @@ export default function myComponent() {
         `
         // Elements
         // Event listeners
-    }
-
-    return {
-        kill: kill,
-        render: render,
     }
 }
